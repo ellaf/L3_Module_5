@@ -30,7 +30,9 @@ public class MurderOfCrows {
          */
         
         /* 2. How many innocent crows had to die before the diamond was found? */
-        
+    	System.out.println(theMurder);
+    	
+    	
     }
 
     private void initializeCrows() {
