@@ -1,5 +1,7 @@
 package data_structures;
 
+import static org.hamcrest.CoreMatchers.instanceOf;
+
 import java.util.ArrayList;
 
 /**
@@ -25,9 +27,25 @@ public class RemovingStuffFromArrayLists {
 		stuffIFoundInTheYard.add(new Worm());
 		stuffIFoundInTheYard.add(new Dirt());
 
-		System.out.println(stuffIFoundInTheYard.size());
-
+		
 		/* TODO 1: Clean out the dirt but keep the delicious worms. */
+		
+		for (int i = 0; i < stuffIFoundInTheYard.size(); i++) {
+			
+			if(stuffIFoundInTheYard.get(i) instanceof Dirt) {
+				
+				stuffIFoundInTheYard.remove(i);
+				i --;
+			}
+			
+	
+		}
+		
+		for (int i = 0; i < stuffIFoundInTheYard.size(); i++) {
+			
+			System.out.println(stuffIFoundInTheYard.get(i));
+			
+		}
 
 		System.out.println(stuffIFoundInTheYard.size()); // should be 2
 
@@ -48,6 +66,7 @@ public class RemovingStuffFromArrayLists {
 		truth.add(' ');
 		truth.add('g');
 		truth.add('#');
+		truth.add('u');
 		truth.add('n');
 		truth.add('s');
 		truth.add('#');
@@ -59,5 +78,24 @@ public class RemovingStuffFromArrayLists {
 
 		/* TODO 2: Remove the hash symbols and print out the truth. */
 
+		for (int i = 0; i < truth.size(); i++) {
+			
+			if(truth.get(i).toString().equals("#")) {
+				
+				truth.remove(i);
+				i --;
+				
+			}
+			
+		}
+		
+		String theTruth = "";
+		for (int i = 0; i < truth.size(); i++) {
+			
+			theTruth += truth.get(i).toString();
+			
+		}
+		
+		System.out.println(theTruth);
 	}
 }
